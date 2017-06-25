@@ -1,4 +1,4 @@
-{% load staic %}
+{% load static %}
 <article>
     <header>
         <div>
@@ -7,9 +7,11 @@
     </header>
     <div class="container">
         <a href="">
-            <img src="{{ post.photo.url }}" alt="">
+            <img width="400px" height="auto" src="{{ post.photo.url }}" alt="">
         </a>
     </div>
     <div>{{ post.comment }}</div>
     <div>{{ post.created_date }}</div>
+    <div><a href="{% url 'post:post_modify' post_pk=post.pk %}"><button>수정하기</button></a></div>
+    <br><br>
 </article>
