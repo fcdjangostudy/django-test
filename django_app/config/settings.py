@@ -34,7 +34,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
+#Custom User
+AUTH_USER_MODEL = 'member.User'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '!j&)o1aze5_263ez^np#+x)^=%ch#+*27&x+3=ml0%#$l&wnv@'
