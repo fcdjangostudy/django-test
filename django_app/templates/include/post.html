@@ -1,0 +1,15 @@
+{% load staic %}
+<article>
+    <header>
+        <div>
+            <span>{{ post.author }}</span>
+        </div>
+    </header>
+    <div class="container">
+        <a href="">
+            <img src="{{ post.photo.url }}" alt="">
+        </a>
+    </div>
+    <div>{{ post.comment }}</div>
+    <div>{{ post.created_date }}</div>
+</article>
