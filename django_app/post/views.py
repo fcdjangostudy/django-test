@@ -29,3 +29,9 @@ def post_modify(request, post_pk):
         'form': form,
     }
     return render(request, 'post/post_modify.html', context)
+
+
+def post_delete(request, post_pk):
+    post = get_object_or_404(Post, pk=post_pk)
+    post.delete()
+    return redirect('post:post_list')

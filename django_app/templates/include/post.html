@@ -12,6 +12,13 @@
     </div>
     <div>{{ post.comment }}</div>
     <div>{{ post.created_date }}</div>
-    <div><a href="{% url 'post:post_modify' post_pk=post.pk %}"><button>수정하기</button></a></div>
+    <div>
+        <div style="float: left; margin: 0 5px 0 0;"><a href="{% url 'post:post_modify' post_pk=post.pk %}">
+            <button>수정하기</button>
+        </a></div>
+        <div style="float: left; margin: 0 5px 0 0;"><a href="{% url 'post:post_delete' post_pk=post.pk %}">
+            <button>삭제하기</button>
+        </a></div>
+    </div>
     <br><br>
 </article>
